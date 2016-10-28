@@ -144,13 +144,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/economic/">economic</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/economic/">economic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-IT/">github IT</a></li></ul>
                     </div>
                 </section>
                 
@@ -262,9 +262,82 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/27/hello-world/" class="article-date">
+      <time datetime="2016-10-27T13:06:24.000Z" itemprop="datePublished">2016-10-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/hello-world/">Hexo搭建简易指南</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
+<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
+<pre><code>&gt; 点击去下载吧： [GitBash客户端下载](https://git-scm.com/downloads/)
+</code></pre><p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
+<pre><code>&gt; 点击去下载吧： [Nodejs安装下载](https://nodejs.org/en/)
+</code></pre><h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
+<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
+<p>2 在本地创建一个目录，用来存放你的博客源码</p>
+<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
+<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment"># 启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
+<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
+<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
+<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-IT/">github IT</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-liurun001" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -402,77 +475,6 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/27/hello-world/" class="article-date">
-      <time datetime="2016-10-27T07:02:06.000Z" itemprop="datePublished">2016-10-27</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/hello-world/">Hexo搭建简易指南</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hzqiuxm.com/" target="_blank" rel="external">hzqiuxm blog</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>标签（空格分隔）：github  教程</p>
-<p>— 面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
-<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
-<pre><code>&gt; 点击去下载吧： [GitBash客户端下载](https://git-scm.com/downloads/)
-</code></pre><p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
-<pre><code>&gt; 点击去下载吧： [Nodejs安装下载](https://nodejs.org/en/)
-</code></pre><h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
-<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
-<p>2 在本地创建一个目录，用来存放你的博客源码</p>
-<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
-<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment"># 启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
-<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
-<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
-<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
-<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
 </div>
       <footer id="footer">
@@ -483,14 +485,14 @@
                 2016 hzqiuxm
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -499,7 +501,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -532,9 +534,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
