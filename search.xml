@@ -67,14 +67,12 @@
 <li>自定义仓库 maven() 和mavenRepo()</li>
 </ul>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">dependencies&#123;</div><div class="line">    mavenCentral()</div><div class="line">    maven&#123;</div><div class="line">        name  <span class="string">'Custom Maven Repository'</span></div><div class="line">        url <span class="string">'http://ziniuxiaozhu.com/nexus/public'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>###Ivy仓库</p>
-<ul>
+<h3 id="Ivy仓库"><a href="#Ivy仓库" class="headerlink" title="Ivy仓库"></a>Ivy仓库</h3><ul>
 <li>相对Maven来说可以自定义布局</li>
 <li>仓库依赖元数据存储在ivy.xml中</li>
 </ul>
 <p><strong>具体语法可参考官方文档</strong></p>
-<p>###扁平目录仓库</p>
-<ul>
+<h3 id="扁平目录仓库"><a href="#扁平目录仓库" class="headerlink" title="扁平目录仓库"></a>扁平目录仓库</h3><ul>
 <li>只有JAR文件，没有元数据</li>
 <li>适合经常手动维护项目中的类库，或者项目迁移的时候</li>
 <li>声明依赖智能使用name和version这两个属性</li>
@@ -87,7 +85,7 @@
 <li>比较本地仓库和远程仓库，减少工件的下载</li>
 <li>支持离线模式，在你无法联网时采用本地缓存来构建</li>
 </ul>
-<p>###常见依赖问题<br><strong>如果你项目有很多依赖，而且你选择自动解决传递性依赖，那么版本冲突几乎是不可避免的</strong></p>
+<h3 id="常见依赖问题"><a href="#常见依赖问题" class="headerlink" title="常见依赖问题"></a>常见依赖问题</h3><p><strong>如果你项目有很多依赖，而且你选择自动解决传递性依赖，那么版本冲突几乎是不可避免的</strong></p>
 <ul>
 <li><p>应对版本冲突<br>设置当遇到版本冲突时，构建失败</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> configuration<span class="selector-class">.cargo</span><span class="selector-class">.resolutionStrategy</span>&#123;</div><div class="line">    failOnVersionConfilct()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -146,7 +144,7 @@
 </li>
 </ul>
 <p>执行 <em>gradle dist</em>结果如下<br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/9.png" alt="任务执行规则"></p>
-<p>###构建块<br>注意每个Gradle包含了3个基本构建块：project、task、property</p>
+<h3 id="构建块"><a href="#构建块" class="headerlink" title="构建块"></a>构建块</h3><p>注意每个Gradle包含了3个基本构建块：project、task、property</p>
 ]]></content>
     </entry>
     
