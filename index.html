@@ -191,7 +191,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gradle-IT/">Gradle IT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IT/">IT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/economic/">economic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-IT/">github  IT</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IT/">IT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/economic/">economic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li></ul>
                     </div>
                 </section>
                 
@@ -297,20 +297,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><contents></contents></p>
-<h2 id="脚本基础"><a href="#脚本基础" class="headerlink" title="脚本基础"></a>脚本基础</h2><h3 id="看看灵活的Groovy例子"><a href="#看看灵活的Groovy例子" class="headerlink" title="看看灵活的Groovy例子"></a>看看灵活的Groovy例子</h3><ul>
-<li>编写脚本build.gradle<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">task</span> upper &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- Begin in upper ----'</span></div><div class="line">	String strSome = <span class="string">'my_nAme'</span></div><div class="line">	<span class="keyword">println</span> <span class="string">'Original: '</span> + strSome</div><div class="line">	<span class="keyword">println</span> <span class="string">'Upper: '</span> + strSome.toUpperCase()</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- End in upper ----'</span></div><div class="line">&#125;	</div><div class="line"></div><div class="line"><span class="keyword">task</span> hello(dependsOn: upper) &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">" I'm dependsOn upper"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>执行下 gradle -q hello<br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/3.png" alt="执行结果"></p>
-<ul>
-<li>更多的脚本技巧请参考：<br><a href="http://wiki.jikexueyuan.com/project/gradle-2-user-guide/build-script-basics.html" target="_blank" rel="external">极客学员Grade2用户指南</a></li>
-</ul>
-<h3 id="默认task设置"><a href="#默认task设置" class="headerlink" title="默认task设置"></a>默认task设置</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">defaultTasks <span class="string">'clean'</span>, <span class="string">'run'</span></div><div class="line"></div><div class="line"><span class="keyword">task</span> upper &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- Begin in upper ----'</span></div><div class="line">	String strSome = <span class="string">'my_nAme'</span></div><div class="line">	<span class="keyword">println</span> <span class="string">'Original: '</span> + strSome</div><div class="line">	<span class="keyword">println</span> <span class="string">'Upper: '</span> + strSome.toUpperCase()</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- End in upper ----'</span></div><div class="line">&#125;	</div><div class="line"></div><div class="line"><span class="keyword">task</span> hello(dependsOn: upper) &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">" I'm dependsOn upper"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">task</span> clean &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">'This is a default task clean '</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">task</span> run &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">'This is a default task run '</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>执行 gradle -q 结果</strong><br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/4.png" alt="执行结果"></p>
-<h3 id="DAG配置"><a href="#DAG配置" class="headerlink" title="DAG配置"></a>DAG配置</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">task</span> destribution &lt;&lt;&#123;</div><div class="line">	<span class="attribute">println</span> <span class="string">"We build the zip with version = <span class="variable">$version</span> "</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">task release(dependsOn:<span class="string">'destribution'</span>) &lt;&lt; &#123;</div><div class="line">	<span class="attribute">println</span> <span class="string">'We release now ......'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">gradle.taskGraph.whenReady&#123;</div><div class="line">	<span class="attribute">taskGraph</span> -&gt; </div><div class="line">	if (taskGraph.hasTask(release)) &#123;</div><div class="line">		<span class="attribute">version</span> = <span class="string">'1.0'</span></div><div class="line">	&#125;else&#123;</div><div class="line">		<span class="attribute">version</span> = <span class="string">'1.0-SNAPSHOT'</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>注意执行不同的TASK，输出结果是不一样的</strong><br> <img src="http://7xsh7v.com2.z0.glb.clouddn.com/5.png" alt="执行结果"></p>
-
+              <p>欢迎来到Gradle系列教材，这一章节讲的是脚本基础相关知识：Groovy ……<br>
+          
       
     </div>
     
@@ -323,6 +311,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2016/10/31/gradle003/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -416,7 +408,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle-IT/">Gradle IT</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li></ul>
     </div>
 
       
@@ -532,7 +524,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle-IT/">Gradle IT</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li></ul>
     </div>
 
       
@@ -605,7 +597,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-IT/">github  IT</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
     </div>
 
       
