@@ -33,7 +33,7 @@ export GRADE_HOME = xxxx/xxxx
 export PATH=$PATH:$GRADLE_HOME">
 <meta property="og:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/1.png">
 <meta property="og:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/2.png">
-<meta property="og:updated_time" content="2016-10-31T02:15:17.000Z">
+<meta property="og:updated_time" content="2016-10-31T02:22:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gradle系列二：入门与安装">
 <meta name="twitter:description" content="入门与安装下载安装
@@ -161,13 +161,13 @@ export PATH=$PATH:$GRADLE_HOME">
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>關於我</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -279,7 +279,7 @@ export PATH=$PATH:$GRADLE_HOME">
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-gradle002" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -330,11 +330,11 @@ export PATH=$PATH:$GRADLE_HOME/bin
 </code></pre></blockquote>
 </li>
 <li>验证是否安装成功<br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/1.png" alt="check install"></li>
-<li>来一个gradle的hello world<br><strong>新建一个文件 build.gradle</strong></li>
-</ul>
+<li><p>来一个gradle的hello world<br><strong>新建一个文件 build.gradle</strong></p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">task</span> helloWorld&#123;</div><div class="line"></div><div class="line">	<span class="keyword">task</span> startSession &lt;&lt; &#123;</div><div class="line">		<span class="keyword">println</span> <span class="string">'Welcome to gradle world!'</span></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="number">3</span>.<span class="keyword">times</span> &#123;</div><div class="line">		<span class="keyword">task</span> <span class="string">"genGradle$it"</span> &lt;&lt; &#123;</div><div class="line">			<span class="keyword">println</span> <span class="string">'genGradle rocks'</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">		</div><div class="line">	genGradle0.dependsOn startSession</div><div class="line">	genGradle2.dependsOn genGradle1, genGradle0</div><div class="line">	</div><div class="line">	<span class="keyword">task</span> groupGradles(dependsOn: genGradle2)</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>执行：gradle -q groupGradles<br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/2.png" alt="run helloworld"></li>
+</li>
+<li><p>执行：gradle -q groupGradles<br><img src="http://7xsh7v.com2.z0.glb.clouddn.com/2.png" alt="run helloworld"></p>
+</li>
 </ul>
 <h3 id="程序简单说明"><a href="#程序简单说明" class="headerlink" title="程序简单说明"></a>程序简单说明</h3><ul>
 <li>这里的task和Ant的targets是对等的</li>
@@ -366,17 +366,17 @@ export PATH=$PATH:$GRADLE_HOME/bin
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/10/31/gradle002/">Gradle系列二：入门与安装</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主頁">hzqiuxm</a></p>
-        <p><span>發布時間:</span>2016-10-31, 10:10:31</p>
-        <p><span>最後更新:</span>2016-10-31, 10:15:17</p>
+        <p><span>本文标题:</span><a href="/2016/10/31/gradle002/">Gradle系列二：入门与安装</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">hzqiuxm</a></p>
+        <p><span>发布时间:</span>2016-10-31, 10:10:31</p>
+        <p><span>最后更新:</span>2016-10-31, 10:22:55</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/10/31/gradle002/" title="Gradle系列二：入门与安装">http://hzqiuxm.github.io/2016/10/31/gradle002/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://hzqiuxm.github.io/2016/10/31/gradle002/　　作者: hzqiuxm" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/31/gradle002/" title="Gradle系列二：入门与安装">http://hzqiuxm.github.io/2016/10/31/gradle002/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hzqiuxm.github.io/2016/10/31/gradle002/　　作者: hzqiuxm" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -403,7 +403,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目錄</strong>
+        <strong class="toc-title">文章目录</strong>
         
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#入门与安装"><span class="toc-number">1.</span> <span class="toc-text">入门与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载安装"><span class="toc-number">1.1.</span> <span class="toc-text">下载安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程序简单说明"><span class="toc-number">1.2.</span> <span class="toc-text">程序简单说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他技巧"><span class="toc-number">1.3.</span> <span class="toc-text">其他技巧</span></a></li></ol></li></ol>
         
@@ -419,10 +419,10 @@ export PATH=$PATH:$GRADLE_HOME/bin
         }
     </style>
 
-    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -494,7 +494,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/31/gradle003/">gradle系列三：脚本基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/31/gradle002/">Gradle系列二：入门与安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/30/gradle001/">Gradle系列一：构建工具简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/liurun001/">商业篇——消费心理学</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/hello-world/">Hexo搭建简易指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/28/liurun002/">商业世界基础逻辑</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/31/gradle003/">gradle系列三：脚本基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/31/gradle002/">Gradle系列二：入门与安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/30/gradle001/">Gradle系列一：构建工具简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/hello-world/">Hexo搭建简易指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/liurun001/">商业篇——消费心理学</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/28/liurun002/">商业世界基础逻辑</a></li></ul>
 
 
 
@@ -511,14 +511,14 @@ export PATH=$PATH:$GRADLE_HOME/bin
                 2016 hzqiuxm
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -527,7 +527,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -560,9 +560,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
