@@ -25,7 +25,8 @@
     <entry>
       <title><![CDATA[Gradle系列二：入门与安装]]></title>
       <url>http://hzqiuxm.github.io/2016/10/31/gradle002/</url>
-      <content type="html"><![CDATA[<h2 id="入门与安装"><a href="#入门与安装" class="headerlink" title="入门与安装"></a>入门与安装</h2><h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><ul>
+      <content type="html"><![CDATA[<p>通过这一章节，你讲学会如何安装Gradle以及简单的任务构建与操作<br><a id="more"></a></p>
+<h2 id="入门与安装"><a href="#入门与安装" class="headerlink" title="入门与安装"></a>入门与安装</h2><h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><ul>
 <li>官方下载地址: <a href="https://gradle.org/gradle-download/" target="_blank" rel="external">https://gradle.org/gradle-download/</a></li>
 <li>安装就是配置环境变量，增加GRADLE_HOME环境变量，值为gradle-2.12\bin所在目录<blockquote>
 <p>windows下直接在环境变量对话框中定义，类linux系统</p>
@@ -68,7 +69,8 @@ export PATH=$PATH:$GRADLE_HOME/bin
     <entry>
       <title><![CDATA[Gradle系列一：构建工具简介]]></title>
       <url>http://hzqiuxm.github.io/2016/10/30/gradle001/</url>
-      <content type="html"><![CDATA[<h2 id="构建工具简介"><a href="#构建工具简介" class="headerlink" title="构建工具简介"></a>构建工具简介</h2><h3 id="四大组成部分"><a href="#四大组成部分" class="headerlink" title="四大组成部分"></a>四大组成部分</h3><ul>
+      <content type="html"><![CDATA[<p>本章节你讲了解到构建工具的演化史，以及各自的特点<br><a id="more"></a></p>
+<h2 id="构建工具简介"><a href="#构建工具简介" class="headerlink" title="构建工具简介"></a>构建工具简介</h2><h3 id="四大组成部分"><a href="#四大组成部分" class="headerlink" title="四大组成部分"></a>四大组成部分</h3><ul>
 <li>构建文件<blockquote>
 <p>使用脚本语言来表达构建逻辑 最常见的是xml、json格式</p>
 </blockquote>
@@ -131,7 +133,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
     <entry>
       <title><![CDATA[Hexo搭建简易指南]]></title>
       <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
-      <content type="html"><![CDATA[<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
+      <content type="html"><![CDATA[<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可<br><a id="more"></a></p>
 <h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
 <p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
 <p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
@@ -151,7 +153,8 @@ export PATH=$PATH:$GRADLE_HOME/bin
     <entry>
       <title><![CDATA[商业篇——消费心理学]]></title>
       <url>http://hzqiuxm.github.io/2016/10/27/liurun001/</url>
-      <content type="html"><![CDATA[<h2 id="消费心理学"><a href="#消费心理学" class="headerlink" title="消费心理学"></a>消费心理学</h2><h3 id="让用户从最有钱的那个心理账户花钱"><a href="#让用户从最有钱的那个心理账户花钱" class="headerlink" title="让用户从最有钱的那个心理账户花钱"></a>让用户从最有钱的那个心理账户花钱</h3><ul>
+      <content type="html"><![CDATA[<h2 id="消费心理学"><a href="#消费心理学" class="headerlink" title="消费心理学"></a>消费心理学</h2><h3 id="让用户从最有钱的那个心理账户花钱"><a href="#让用户从最有钱的那个心理账户花钱" class="headerlink" title="让用户从最有钱的那个心理账户花钱"></a>让用户从最有钱的那个心理账户花钱</h3><a id="more"></a>
+<ul>
 <li>概念：<strong>心理账户</strong><br>用户的钱都是存在不同的心理账户里的，比如生活开支账户，家庭建设和个人发展账户，休闲娱乐账户等，这些账户又是在一个大账户之下的</li>
 </ul>
 <blockquote>
@@ -234,7 +237,8 @@ export PATH=$PATH:$GRADLE_HOME/bin
     <entry>
       <title><![CDATA[商业世界基础逻辑]]></title>
       <url>http://hzqiuxm.github.io/2015/10/28/liurun002/</url>
-      <content type="html"><![CDATA[<h2 id="商业世界基础逻辑"><a href="#商业世界基础逻辑" class="headerlink" title="商业世界基础逻辑"></a>商业世界基础逻辑</h2><h3 id="比电商更先进的零售方式是"><a href="#比电商更先进的零售方式是" class="headerlink" title="比电商更先进的零售方式是?"></a>比电商更先进的零售方式是?</h3><ul>
+      <content type="html"><![CDATA[<h2 id="商业世界基础逻辑"><a href="#商业世界基础逻辑" class="headerlink" title="商业世界基础逻辑"></a>商业世界基础逻辑</h2><h3 id="比电商更先进的零售方式是"><a href="#比电商更先进的零售方式是" class="headerlink" title="比电商更先进的零售方式是?"></a>比电商更先进的零售方式是?</h3><a id="more"></a>
+<ul>
 <li>概念：流量成本<br>我们每获取一个客户，要为此付出的基本价格<blockquote>
 <p>案例：开个鞋店，如果租金是10万，估计的客流量是5000，每个潜在客户的成本就是100000/5000 = 20元</p>
 </blockquote>
