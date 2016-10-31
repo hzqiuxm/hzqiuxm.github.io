@@ -16,21 +16,21 @@
 
 
 <meta name="description" content="脚本基础看看灵活的Groovy例子
-编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUpp">
+编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gradle系列三：脚本基础">
 <meta property="og:url" content="http://hzqiuxm.github.io/2016/10/31/gradle003/index.html">
 <meta property="og:site_name" content="菡萏如佳人Blog">
 <meta property="og:description" content="脚本基础看看灵活的Groovy例子
-编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUpp">
+编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUp">
 <meta property="og:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/3.png">
 <meta property="og:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/4.png">
 <meta property="og:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/5.png">
-<meta property="og:updated_time" content="2016-10-31T02:23:17.000Z">
+<meta property="og:updated_time" content="2016-10-31T03:01:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gradle系列三：脚本基础">
 <meta name="twitter:description" content="脚本基础看看灵活的Groovy例子
-编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUpp">
+编写脚本build.gradle1234567891011task upper &amp;lt;&amp;lt; &amp;#123;	println &apos;---- Begin in upper ----&apos;	String strSome = &apos;my_nAme&apos;	println &apos;Original: &apos; + strSome	println &apos;Upper: &apos; + strSome.toUp">
 <meta name="twitter:image" content="http://7xsh7v.com2.z0.glb.clouddn.com/3.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -312,7 +312,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="脚本基础"><a href="#脚本基础" class="headerlink" title="脚本基础"></a>脚本基础</h2><h3 id="看看灵活的Groovy例子"><a href="#看看灵活的Groovy例子" class="headerlink" title="看看灵活的Groovy例子"></a>看看灵活的Groovy例子</h3><ul>
+        <p><contents></contents></p>
+<h2 id="脚本基础"><a href="#脚本基础" class="headerlink" title="脚本基础"></a>脚本基础</h2><h3 id="看看灵活的Groovy例子"><a href="#看看灵活的Groovy例子" class="headerlink" title="看看灵活的Groovy例子"></a>看看灵活的Groovy例子</h3><ul>
 <li>编写脚本build.gradle<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">task</span> upper &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- Begin in upper ----'</span></div><div class="line">	String strSome = <span class="string">'my_nAme'</span></div><div class="line">	<span class="keyword">println</span> <span class="string">'Original: '</span> + strSome</div><div class="line">	<span class="keyword">println</span> <span class="string">'Upper: '</span> + strSome.toUpperCase()</div><div class="line">	<span class="keyword">println</span> <span class="string">'---- End in upper ----'</span></div><div class="line">&#125;	</div><div class="line"></div><div class="line"><span class="keyword">task</span> hello(dependsOn: upper) &lt;&lt; &#123;</div><div class="line">	<span class="keyword">println</span> <span class="string">" I'm dependsOn upper"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -335,7 +336,7 @@
         <p><span>本文标题:</span><a href="/2016/10/31/gradle003/">gradle系列三：脚本基础</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">hzqiuxm</a></p>
         <p><span>发布时间:</span>2016-10-31, 10:15:52</p>
-        <p><span>最后更新:</span>2016-10-31, 10:23:17</p>
+        <p><span>最后更新:</span>2016-10-31, 11:01:37</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/10/31/gradle003/" title="gradle系列三：脚本基础">http://hzqiuxm.github.io/2016/10/31/gradle003/</a>
             <span class="copy-path" data-clipboard-text="原文: http://hzqiuxm.github.io/2016/10/31/gradle003/　　作者: hzqiuxm" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
