@@ -130,7 +130,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
     <entry>
       <title><![CDATA[Hexo搭建简易指南]]></title>
       <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
-      <content type="html"><![CDATA[<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
 <h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
 <p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
 <p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
