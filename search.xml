@@ -620,6 +620,27 @@ export PATH=$PATH:$GRADLE_HOME/bin
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo搭建简易指南]]></title>
+      <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
+      <content type="html"><![CDATA[<p>你离搭建一个个人博客网站还差5分钟，赶紧开始吧……<br><a id="more"></a></p>
+<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
+<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
+<p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
+<p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
+<p>点击去下载吧:<a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs安装下载</a></p>
+<h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
+<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
+<p>2 在本地创建一个目录，用来存放你的博客源码</p>
+<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
+<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment">#启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
+<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
+<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
+<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[消费心理学]]></title>
       <url>http://hzqiuxm.github.io/2016/10/27/liurun001/</url>
       <content type="html"><![CDATA[<h2 id="消费心理学"><a href="#消费心理学" class="headerlink" title="消费心理学"></a>消费心理学</h2><h3 id="让用户从最有钱的那个心理账户花钱"><a href="#让用户从最有钱的那个心理账户花钱" class="headerlink" title="让用户从最有钱的那个心理账户花钱"></a>让用户从最有钱的那个心理账户花钱</h3><a id="more"></a>
@@ -704,23 +725,35 @@ export PATH=$PATH:$GRADLE_HOME/bin
     </entry>
     
     <entry>
-      <title><![CDATA[Hexo搭建简易指南]]></title>
-      <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
-      <content type="html"><![CDATA[<p>你离搭建一个个人博客网站还差5分钟，赶紧开始吧……<br><a id="more"></a></p>
-<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
-<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
-<p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
-<p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
-<p>点击去下载吧:<a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs安装下载</a></p>
-<h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
-<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
-<p>2 在本地创建一个目录，用来存放你的博客源码</p>
-<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
-<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment">#启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
-<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
-<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
-<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
-<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
+      <title><![CDATA[常见负载均衡策略]]></title>
+      <url>http://hzqiuxm.github.io/2014/01/13/%E5%B8%B8%E8%A7%81%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5/</url>
+      <content type="html"><![CDATA[<p>  随着大规模的集群应用越来越普及，大小企业都会采用负载均衡来实现服务器压力分摊。<br>本人初步整理了下，目前在企业中常用的几种负载均衡策略。每种策略有着自己的优缺点，适用的场景也不同，所以在一个企业中，可能存在一种或多种的策略共存情况。<br><a id="more"></a></p>
+<h3 id="HTTP重定向负载均衡"><a href="#HTTP重定向负载均衡" class="headerlink" title="HTTP重定向负载均衡"></a>HTTP重定向负载均衡</h3><p>这个是早期用的比较多的一种负载均衡策略，采用的思路是用一台http服务器来接受用户的请求，通过设置的负责均衡算法，返回一个重定向的真实服务器给用户终端，用户终端根据重定向的URL，访问真实的服务器。该种策略的虽然简单，但是目前可能会被搜索引擎判为SEO作弊，降低搜索排名，需要权衡使用。</p>
+<p>http重定向策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/HTTP%E9%87%8D%E5%AE%9A%E5%90%91_slb.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<h3 id="DNS域名解析负载均衡"><a href="#DNS域名解析负载均衡" class="headerlink" title="DNS域名解析负载均衡"></a>DNS域名解析负载均衡</h3><p>设计思路是利用DNS服务器，对地址解析的时候，直接根据配置好的规则，返回均衡后的IP地址，该策略设计简单省力，性能也有改善，DNS会自动解析离用户最近的一个服务器地址给用户。但是一般DNS解析是一个多级解析，当某台服务器下线后，DNS未及时更新，可能访问已经失效的服务器。所以在实际应用时一般通过DNS返回的是一组服务器，然后再通过其他负载手段访问组服务器中的某台服务器。</p>
+<p>DNS域名解析负载策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/DNS_slb.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<h3 id="反向代理负载均衡策略"><a href="#反向代理负载均衡策略" class="headerlink" title="反向代理负载均衡策略"></a>反向代理负载均衡策略</h3><p>反向代理服务器是处在服务器前端的位置，一般可以扮演安全，缓存，负载的角色。作为负载服务器，它的有点是简单，缺点是每次都经过反向代理服务器中转，它很容易成为系统瓶颈。</p>
+<p>反向代理负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86_slb.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<h3 id="IP负载均衡策略"><a href="#IP负载均衡策略" class="headerlink" title="IP负载均衡策略"></a>IP负载均衡策略</h3><p>设计思路是采用一台网关服务器，设置上服务器的内外网地址，当用户通过外网地址访问的时候，通过负载算法，将其路由到某台内网服务上。<br>由于内部服务器和网关采用过的是内网交互，最后网关返回给用户时候，必须将源地址重新修改为网关服务器的外网地址。该策略比起反向代理，性能上有了改善，但是带宽会成为其瓶颈，如果服务的应用以下载功能为主的话，慎用该策略。</p>
+<p>IP负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/IP_slb.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<h3 id="数据链路负载均衡策略"><a href="#数据链路负载均衡策略" class="headerlink" title="数据链路负载均衡策略"></a>数据链路负载均衡策略</h3><p>IP负载均衡策略采用的是网关服务器修改IP来解决，那么能不能直接让内部服务器返回给用户呢？当然可以，只要负载均衡器修改MAC地址即可，这种方式就被成为数据链路负责均衡策略。这个就避免修改数据包的源地址，目的地址，与目的服务器直接响应。比如LVS采用的就是该种策略。</p>
+<p>数据链路负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF_slb.png" alt="此处输入图片的描述"></p>
+</blockquote>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>本文中未提及负载均衡算法，在实际应用中，负载均衡策略与负载均衡算法是结合使用的。在某些简单的应用中，可能直接在代码或配置文件中采用均衡算法来实现负载，</p>
 ]]></content>
     </entry>
     

@@ -15,16 +15,22 @@
 
 
 
-<meta name="description" content="本章节你讲了解到构建工具的演化史，以及各自的特点">
+<meta name="description" content="随着大规模的集群应用越来越普及，大小企业都会采用负载均衡来实现服务器压力分摊。本人初步整理了下，目前在企业中常用的几种负载均衡策略。每种策略有着自己的优缺点，适用的场景也不同，所以在一个企业中，可能存在一种或多种的策略共存情况。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle系列一：构建工具简介">
-<meta property="og:url" content="http://hzqiuxm.github.io/2016/10/30/gradle001/index.html">
+<meta property="og:title" content="常见负载均衡策略">
+<meta property="og:url" content="http://hzqiuxm.github.io/2014/01/13/常见负载均衡策略/index.html">
 <meta property="og:site_name" content="菡萏如佳人Blog">
-<meta property="og:description" content="本章节你讲了解到构建工具的演化史，以及各自的特点">
-<meta property="og:updated_time" content="2016-10-31T03:19:02.000Z">
+<meta property="og:description" content="随着大规模的集群应用越来越普及，大小企业都会采用负载均衡来实现服务器压力分摊。本人初步整理了下，目前在企业中常用的几种负载均衡策略。每种策略有着自己的优缺点，适用的场景也不同，所以在一个企业中，可能存在一种或多种的策略共存情况。">
+<meta property="og:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/HTTP%E9%87%8D%E5%AE%9A%E5%90%91_slb.png">
+<meta property="og:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/DNS_slb.png">
+<meta property="og:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86_slb.png">
+<meta property="og:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/IP_slb.png">
+<meta property="og:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF_slb.png">
+<meta property="og:updated_time" content="2016-11-13T02:15:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gradle系列一：构建工具简介">
-<meta name="twitter:description" content="本章节你讲了解到构建工具的演化史，以及各自的特点">
+<meta name="twitter:title" content="常见负载均衡策略">
+<meta name="twitter:description" content="随着大规模的集群应用越来越普及，大小企业都会采用负载均衡来实现服务器压力分摊。本人初步整理了下，目前在企业中常用的几种负载均衡策略。每种策略有着自己的优缺点，适用的场景也不同，所以在一个企业中，可能存在一种或多种的策略共存情况。">
+<meta name="twitter:image" content="http://7xsh7v.com2.z0.glb.qiniucdn.com/HTTP%E9%87%8D%E5%AE%9A%E5%90%91_slb.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Gradle系列一：构建工具简介 | 菡萏如佳人Blog</title>
+<title>常见负载均衡策略 | 菡萏如佳人Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -265,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-gradle001" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-常见负载均衡策略" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/30/gradle001/" class="article-date">
-      <time datetime="2016-10-30T04:02:24.000Z" itemprop="datePublished">2016-10-30</time>
+      <a href="/2014/01/13/常见负载均衡策略/" class="article-date">
+      <time datetime="2014-01-13T02:09:15.000Z" itemprop="datePublished">2014-01-13</time>
 </a>
 
 
@@ -284,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Gradle系列一：构建工具简介
+      常见负载均衡策略
     </h1>
   
 
@@ -295,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT/">IT</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -305,64 +311,33 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>本章节你讲了解到构建工具的演化史，以及各自的特点<br><a id="more"></a></p>
-<h2 id="构建工具简介"><a href="#构建工具简介" class="headerlink" title="构建工具简介"></a>构建工具简介</h2><h3 id="四大组成部分"><a href="#四大组成部分" class="headerlink" title="四大组成部分"></a>四大组成部分</h3><ul>
-<li>构建文件<blockquote>
-<p>使用脚本语言来表达构建逻辑 最常见的是xml、json格式</p>
+        <p>  随着大规模的集群应用越来越普及，大小企业都会采用负载均衡来实现服务器压力分摊。<br>本人初步整理了下，目前在企业中常用的几种负载均衡策略。每种策略有着自己的优缺点，适用的场景也不同，所以在一个企业中，可能存在一种或多种的策略共存情况。<br><a id="more"></a></p>
+<h3 id="HTTP重定向负载均衡"><a href="#HTTP重定向负载均衡" class="headerlink" title="HTTP重定向负载均衡"></a>HTTP重定向负载均衡</h3><p>这个是早期用的比较多的一种负载均衡策略，采用的思路是用一台http服务器来接受用户的请求，通过设置的负责均衡算法，返回一个重定向的真实服务器给用户终端，用户终端根据重定向的URL，访问真实的服务器。该种策略的虽然简单，但是目前可能会被搜索引擎判为SEO作弊，降低搜索排名，需要权衡使用。</p>
+<p>http重定向策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/HTTP%E9%87%8D%E5%AE%9A%E5%90%91_slb.png" alt="此处输入图片的描述"></p>
 </blockquote>
-</li>
-<li>构建输入输出<blockquote>
-<p>输入是指构建任务需要的任务或数据，输出是指构建任务的产出结果</p>
+<h3 id="DNS域名解析负载均衡"><a href="#DNS域名解析负载均衡" class="headerlink" title="DNS域名解析负载均衡"></a>DNS域名解析负载均衡</h3><p>设计思路是利用DNS服务器，对地址解析的时候，直接根据配置好的规则，返回均衡后的IP地址，该策略设计简单省力，性能也有改善，DNS会自动解析离用户最近的一个服务器地址给用户。但是一般DNS解析是一个多级解析，当某台服务器下线后，DNS未及时更新，可能访问已经失效的服务器。所以在实际应用时一般通过DNS返回的是一组服务器，然后再通过其他负载手段访问组服务器中的某台服务器。</p>
+<p>DNS域名解析负载策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/DNS_slb.png" alt="此处输入图片的描述"></p>
 </blockquote>
-</li>
-<li>构建引擎<blockquote>
-<p>用来解析执行构建文件指令或规则的工具</p>
+<h3 id="反向代理负载均衡策略"><a href="#反向代理负载均衡策略" class="headerlink" title="反向代理负载均衡策略"></a>反向代理负载均衡策略</h3><p>反向代理服务器是处在服务器前端的位置，一般可以扮演安全，缓存，负载的角色。作为负载服务器，它的有点是简单，缺点是每次都经过反向代理服务器中转，它很容易成为系统瓶颈。</p>
+<p>反向代理负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86_slb.png" alt="此处输入图片的描述"></p>
 </blockquote>
-</li>
-<li>依赖管理器<blockquote>
-<p>管理构建任务所要依赖的第三方或公共类库 </p>
+<h3 id="IP负载均衡策略"><a href="#IP负载均衡策略" class="headerlink" title="IP负载均衡策略"></a>IP负载均衡策略</h3><p>设计思路是采用一台网关服务器，设置上服务器的内外网地址，当用户通过外网地址访问的时候，通过负载算法，将其路由到某台内网服务上。<br>由于内部服务器和网关采用过的是内网交互，最后网关返回给用户时候，必须将源地址重新修改为网关服务器的外网地址。该策略比起反向代理，性能上有了改善，但是带宽会成为其瓶颈，如果服务的应用以下载功能为主的话，慎用该策略。</p>
+<p>IP负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/IP_slb.png" alt="此处输入图片的描述"></p>
 </blockquote>
-</li>
-</ul>
-<h3 id="蚂蚁式构建-Ant"><a href="#蚂蚁式构建-Ant" class="headerlink" title="蚂蚁式构建 Ant"></a>蚂蚁式构建 Ant</h3><ul>
-<li>Apache Ant是一个用Java编写的开源构建工具</li>
-<li>构建文件使用XML来表示的，可以在任何环境下使用</li>
-<li>不提供依赖管理器，自行管理</li>
-<li>结合Ivy可以实现依赖管理器</li>
-<li>Ant构建术语<blockquote>
-<p>project、target、task</p>
+<h3 id="数据链路负载均衡策略"><a href="#数据链路负载均衡策略" class="headerlink" title="数据链路负载均衡策略"></a>数据链路负载均衡策略</h3><p>IP负载均衡策略采用的是网关服务器修改IP来解决，那么能不能直接让内部服务器返回给用户呢？当然可以，只要负载均衡器修改MAC地址即可，这种方式就被成为数据链路负责均衡策略。这个就避免修改数据包的源地址，目的地址，与目的服务器直接响应。比如LVS采用的就是该种策略。</p>
+<p>数据链路负载均衡策略架构图：</p>
+<blockquote>
+<p><img src="http://7xsh7v.com2.z0.glb.qiniucdn.com/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF_slb.png" alt="此处输入图片的描述"></p>
 </blockquote>
-</li>
-<li>没有对如何定义构建的结构强加任何限制，对源码、输出目录、target拥有完全灵活的选择</li>
-<li>缺点<blockquote>
-<p>XML本身较为臃肿与啰嗦</p>
-<pre><code>没有建设项目标准，build文件常常会随着项目开发而变得繁杂重复
-无法量化被编译的类或执行的TASK
-没有Ivy情况下，Ant很难管理依赖
-</code></pre></blockquote>
-</li>
-</ul>
-<h3 id="专家构建-Maven"><a href="#专家构建-Maven" class="headerlink" title="专家构建 Maven"></a>专家构建 Maven</h3><ul>
-<li>使用约定优于配置的思想，规定了标准的目录布局</li>
-<li>基于生命周期的思想，通过三套生命周期来管理构建过程</li>
-<li>构建文件也是使用XML来表示的，可以在任何环境下使用</li>
-<li>核心功能可以通过开发定制的插件来扩展，社区插件很丰富</li>
-<li>脚本中可以定义外部依赖库，一般会搭建Nexus结合maven中心仓库来管理</li>
-<li>缺点<blockquote>
-<p>默认的结构和生命周期可能会不适合你的项目<br>  自己定制扩展比较复杂，需要了解Mojos(内部扩展API) </p>
-</blockquote>
-</li>
-</ul>
-<h3 id="我们想要的构建"><a href="#我们想要的构建" class="headerlink" title="我们想要的构建"></a>我们想要的构建</h3><ul>
-<li>具有表达式、声明式、可维护的构建语言</li>
-<li>标准化的项目布局和生命周期，但是具有完全的灵活性和对默认值的完全可配置性</li>
-<li>定制逻辑灵活易用</li>
-<li>支持构建多个项目组成的项目结构</li>
-<li>支持依赖管理</li>
-<li>可以很好的和Ant、Maven集成</li>
-<li>高效且有良好的扩展性</li>
-</ul>
-<p><strong>是的它就是Gradle,下一代的构建工具</strong></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>本文中未提及负载均衡算法，在实际应用中，负载均衡策略与负载均衡算法是结合使用的。在某些简单的应用中，可能直接在代码或配置文件中采用均衡算法来实现负载，</p>
 
       
     </div>
@@ -371,13 +346,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/30/gradle001/">Gradle系列一：构建工具简介</a></p>
+        <p><span>本文标题:</span><a href="/2014/01/13/常见负载均衡策略/">常见负载均衡策略</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">hzqiuxm</a></p>
-        <p><span>发布时间:</span>2016-10-30, 12:02:24</p>
-        <p><span>最后更新:</span>2016-10-31, 11:19:02</p>
+        <p><span>发布时间:</span>2014-01-13, 10:09:15</p>
+        <p><span>最后更新:</span>2016-11-13, 10:15:00</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/30/gradle001/" title="Gradle系列一：构建工具简介">http://hzqiuxm.github.io/2016/10/30/gradle001/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://hzqiuxm.github.io/2016/10/30/gradle001/　　作者: hzqiuxm" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2014/01/13/常见负载均衡策略/" title="常见负载均衡策略">http://hzqiuxm.github.io/2014/01/13/常见负载均衡策略/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hzqiuxm.github.io/2014/01/13/常见负载均衡策略/　　作者: hzqiuxm" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -390,17 +365,11 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/10/31/gradle002/">
-                    Gradle系列二：入门与安装
+                <a href="/2016/10/27/liurun001/">
+                    消费心理学
                 </a>
             </div>
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/10/28/liurun002/">
-                    商业世界基础逻辑
-                </a>
-            </div>
         
     </nav>
 
@@ -410,7 +379,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#构建工具简介"><span class="toc-number">1.</span> <span class="toc-text">构建工具简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#四大组成部分"><span class="toc-number">1.1.</span> <span class="toc-text">四大组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#蚂蚁式构建-Ant"><span class="toc-number">1.2.</span> <span class="toc-text">蚂蚁式构建 Ant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#专家构建-Maven"><span class="toc-number">1.3.</span> <span class="toc-text">专家构建 Maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我们想要的构建"><span class="toc-number">1.4.</span> <span class="toc-text">我们想要的构建</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP重定向负载均衡"><span class="toc-number">1.</span> <span class="toc-text">HTTP重定向负载均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS域名解析负载均衡"><span class="toc-number">2.</span> <span class="toc-text">DNS域名解析负载均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反向代理负载均衡策略"><span class="toc-number">3.</span> <span class="toc-text">反向代理负载均衡策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP负载均衡策略"><span class="toc-number">4.</span> <span class="toc-text">IP负载均衡策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据链路负载均衡策略"><span class="toc-number">5.</span> <span class="toc-text">数据链路负载均衡策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结"><span class="toc-number">6.</span> <span class="toc-text">小结</span></a></li></ol>
         
     </div>
     <style>
@@ -446,7 +415,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Gradle系列一：构建工具简介　| 菡萏如佳人Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"常见负载均衡策略　| 菡萏如佳人Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -462,7 +431,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/30/gradle001/" data-title="Gradle系列一：构建工具简介" data-url="http://hzqiuxm.github.io/2016/10/30/gradle001/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2014/01/13/常见负载均衡策略/" data-title="常见负载均衡策略" data-url="http://hzqiuxm.github.io/2014/01/13/常见负载均衡策略/"></div>
     <script>
         var duoshuoQuery = {short_name:"null"};
         var loadComment = function(){
@@ -485,7 +454,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/31/gradle002/" title="上一篇: Gradle系列二：入门与安装">
+            <a href="/2016/10/27/liurun001/" title="上一篇: 消费心理学">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -493,9 +462,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/28/liurun002/" title="下一篇: 商业世界基础逻辑">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
