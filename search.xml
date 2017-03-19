@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[CTO内训营—沟通能力篇之一(入门概述)]]></title>
       <url>http://hzqiuxm.github.io/2016/12/08/%E6%B2%9F%E9%80%9A%E8%83%BD%E5%8A%9B%E7%AF%87%E4%B9%8B%E4%B8%80%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/</url>
-      <content type="html"><![CDATA[<p>所以根据我个人的理解，我秉着大道至简的原则，将沟通能力分为了表达能力和倾听能力。<br>但是本课程的编排却不是按照表达和倾听这两部分来进行的，而是另辟蹊径按照：入门概述，看入人里，看出人外，看人之间，出门技巧五大部分组成。<br>&lt;–!more–&gt;</p>
+      <content type="html"><![CDATA[<p>所以根据我个人的理解，我秉着大道至简的原则，将沟通能力分为了表达能力和倾听能力。<br>但是本课程的编排却不是按照表达和倾听这两部分来进行的，而是另辟蹊径按照：入门概述，看入人里，看出人外，看人之间，出门技巧五大部分组成。<br><a id="more"></a></p>
 <h2 id="CTO内训营—沟通能力篇之一-入门概述"><a href="#CTO内训营—沟通能力篇之一-入门概述" class="headerlink" title="CTO内训营—沟通能力篇之一(入门概述)"></a>CTO内训营—沟通能力篇之一(入门概述)</h2><h3 id="课程前言"><a href="#课程前言" class="headerlink" title="课程前言"></a>课程前言</h3><p>根据百度百科的定义，沟通能力包含了四大方面的能力：表达能力，争辩能力，倾听能力，设计能力。而我个人觉得设计能力其实是属于表达能力的一种，而争辩能力首先未必是沟通中必须要使用的能力，其次争辩能力类似与逻辑能力，是一个人综合能力组成一部分。最后争辩能力不足，可能不只是局限于你个人逻辑能力，还有可能是倾听能力不足，无法理解对方使得无法争辩，也可能是你理解了，却因为缺乏表达能力，无法有效进行争辩。<br>所以根据我个人的理解，我秉着大道至简的原则，将沟通能力分为了表达能力和倾听能力。<br>但是本课程的编排却不是按照表达和倾听这两部分来进行的，而是参考了畅销书《沟通的艺术》，将书中的体系进行了进一步的整理扩充，形成了：入门概述，看入人里，看出人外，看人之间，出门技巧五大部分组成。</p>
 <h4 id="入门概述"><a href="#入门概述" class="headerlink" title="入门概述"></a>入门概述</h4><p>入门概述中主要向大家介绍了，我们为什么要沟通？什么是沟通？沟通的历程包含了拿几个步骤？阐述了沟通中常见的一般误区，以及沟通的能力分成的四个阶段。</p>
 <h4 id="看入人里"><a href="#看入人里" class="headerlink" title="看入人里"></a>看入人里</h4><p>看入人里主要向大家介绍了我们在沟通之前应看清自身，该章节会讲述沟通与认同的关系，其中认同包含了：自我概念，认同管理，自我坦露。还有沟通知觉的历程，影响知觉的因素，利用知觉进行解码沟通，其中最重要的是同理心，并介绍如何提升自己的同理心。最后介绍情绪对沟通产生的重要影响，以及如何更好的管理负面情绪。</p>
@@ -719,6 +719,27 @@ export PATH=$PATH:$GRADLE_HOME/bin
     </entry>
     
     <entry>
+      <title><![CDATA[Hexo搭建简易指南]]></title>
+      <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
+      <content type="html"><![CDATA[<p>你离搭建一个个人博客网站还差5分钟，赶紧开始吧……<br><a id="more"></a></p>
+<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
+<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
+<p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
+<p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
+<p>点击去下载吧:<a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs安装下载</a></p>
+<h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
+<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
+<p>2 在本地创建一个目录，用来存放你的博客源码</p>
+<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
+<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment">#启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
+<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
+<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
+<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[消费心理学]]></title>
       <url>http://hzqiuxm.github.io/2016/10/27/liurun001/</url>
       <content type="html"><![CDATA[<h2 id="消费心理学"><a href="#消费心理学" class="headerlink" title="消费心理学"></a>消费心理学</h2><h3 id="让用户从最有钱的那个心理账户花钱"><a href="#让用户从最有钱的那个心理账户花钱" class="headerlink" title="让用户从最有钱的那个心理账户花钱"></a>让用户从最有钱的那个心理账户花钱</h3><a id="more"></a>
@@ -799,27 +820,6 @@ export PATH=$PATH:$GRADLE_HOME/bin
 <p>  避免极端<br>  权衡对比<br>  消费者不是为    商品的成本付费，而是为商品的价值感付费</p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo搭建简易指南]]></title>
-      <url>http://hzqiuxm.github.io/2016/10/27/hello-world/</url>
-      <content type="html"><![CDATA[<p>你离搭建一个个人博客网站还差5分钟，赶紧开始吧……<br><a id="more"></a></p>
-<h1 id="Hexo搭建简易指南"><a href="#Hexo搭建简易指南" class="headerlink" title="Hexo搭建简易指南"></a>Hexo搭建简易指南</h1><p>面向对象是程序员们，此教程主要以Windows下安装, Mac和linux安装就更简单了基本是输入安装Hexo的几个命令即可</p>
-<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="GIT环境搭建"><a href="#GIT环境搭建" class="headerlink" title="GIT环境搭建"></a>GIT环境搭建</h3><p>建议安装一个git客户端软件(下载不了？因为你没翻墙啊)</p>
-<p>点击去下载吧:<a href="https://git-scm.com/downloads/" target="_blank" rel="external">GitBash客户端下载</a></p>
-<p>###安装Nodejs环境<br>直接去官网下载一个，无脑下一步就行</p>
-<p>点击去下载吧:<a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs安装下载</a></p>
-<h3 id="注册一个GITHUB账号"><a href="#注册一个GITHUB账号" class="headerlink" title="注册一个GITHUB账号"></a>注册一个GITHUB账号</h3><p>这个就不用教了吧，相信作为一个合格的程序员，你早就有了。什么？ 你没有，那你离合格的程序员就差一个GITHUB账号了，还不赶紧戳<a href="https://github.com/join?source=login" target="_blank" rel="external">我去注册</a></p>
-<h2 id="开始安装Hexo"><a href="#开始安装Hexo" class="headerlink" title="开始安装Hexo"></a>开始安装Hexo</h2><p>1 安装Hexo命令行环境<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
-<p>2 在本地创建一个目录，用来存放你的博客源码</p>
-<p>3 进入新建的目录执行以下命令，进行初始化和安装工作<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init</span></div></pre></td></tr></table></figure></p>
-<p>4 接下来生成默认的博客并在本地测试下<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g  <span class="comment">#生成默认的hello world</span></div><div class="line">hexo s  <span class="comment">#启动本地服务 访问 localhost:4000查看效果</span></div></pre></td></tr></table></figure></p>
-<p>5 到这步说明本地已经安装好了，接下来是如何同步到github上用默认的域名访问<br>  在你的github上创建一个新仓库，仓库名格式必须是：{你的用户名}.github.io</p>
-<p>6 配置配置文件_config.yml 内容如下（注意空格!）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/&#123;你的用户名&#125;/&#123;你的用户名&#125;.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
-<p>7 安装一个发布插件并发布<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git --save  <span class="comment">#安装发布插件</span></div><div class="line"></div><div class="line">hexo deploy <span class="comment">#发布到github</span></div></pre></td></tr></table></figure></p>
-<p>8 全部完成，你可以通过github提供的域名进行访问你的博客了！<br>   默认域名地址：{你的用户名}.github.io 当然你还可以绑定到你自己的域名上<br>   请参考教程: <a href="http://www.hzqiuxm.com" target="_blank" rel="external">Github上如何绑定自己的域名</a></p>
 ]]></content>
     </entry>
     
